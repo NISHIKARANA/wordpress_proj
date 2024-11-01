@@ -2,12 +2,12 @@ pipeline setup
 Have use gitaction as my ci/cd tool so for this we use gitaction for pipelines
 - create a .github/workflows/deploy.yml file first
 - create a ec2 instance in aws
-- create a docker-compose.yml file their with necessary requirement
-- in deploy.yml write the script to build and deploy image
-- after creating in go in action option and click on run triggers it will do the job
+- create a docker-compose.yml file in ec2 intance with necessary requirement and build it.
+- in deploy.yml write the script to build and deploy image in enviornment.
+- To run pipeline go in action option and click on run triggers it will do the job
 - also have used all credentials in secret for security purpose
 
-Script Explanation 
+Script Explanation : 
 The pipeline starts when you click a button in GitHub. This is called workflow_dispatch.
 Jobs: The pipeline is divided into two main jobs: build and deploy.
 
@@ -55,7 +55,7 @@ Run Docker Compose:
 
 It checks if the docker-compose.yml file (which defines how to run your containers) exists at a specific path. If it does, it runs the command to start up your WordPress and MySQL containers in the background. If the file doesn’t exist, it shows an error message.
 
-To access website 
+To access website :
 http://<ec2-ip>
 http://16.170.208.105
 
