@@ -49,4 +49,4 @@ jobs:
       # Step 8: Update ECS Service
       - name: Update ECS Service
         run: |
-          aws ecs update-service --cluster my-cluster --service my-wordpress-service --force-new-deployment
+          aws ecs update-service --cluster wordpress_project --service wordpress --force-new-deployment
