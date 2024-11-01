@@ -28,7 +28,7 @@ jobs:
       - name: Pull MySQL Image from Docker Hub
         run: docker pull mysql:5.7
 
-      # Step 6: Push MySQL Image to Docker Hub (if customized)
+      # Step 6: Push MySQL Image to Docker Hub
       - name: Push MySQL Image (if customized)
         if: ${{ env.MYSQL_IMAGE_CUSTOMIZED == 'true' }}
         run: docker push ${{ secrets.DOCKER_USERNAME }}/mysql:5.7
