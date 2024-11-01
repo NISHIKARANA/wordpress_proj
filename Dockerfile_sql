@@ -1,0 +1,11 @@
+# Dockerfile for MySQL
+FROM mysql:5.7
+
+# Define database credentials
+ENV MYSQL_ROOT_PASSWORD=root_password
+ENV MYSQL_DATABASE=wp_database
+ENV MYSQL_USER=wp_user
+ENV MYSQL_PASSWORD=wp_pass
+
+# Expose the default MySQL port
+EXPOSE 3306
